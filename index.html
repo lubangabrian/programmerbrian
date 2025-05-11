@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VAWO Converter</title>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="neon-bg">
+    <div class="container">
+      <h1 class="neon-text">VAWO Converter</h1>
+      <div id="error" class="error hidden"></div>
+      <div class="grid">
+        <!-- Voltage -->
+        <div class="field">
+          <label for="voltage">Voltage</label>
+          <div class="input-group">
+            <input type="number" step="any" id="voltage" placeholder="Value">
+            <select id="unitV">
+              <option value="1">V</option>
+              <option value="0.001">mV</option>
+              <option value="1000">kV</option>
+            </select>
+          </div>
+        </div>
+        <!-- Current -->
+        <div class="field">
+          <label for="current">Current</label>
+          <div class="input-group">
+            <input type="number" step="any" id="current" placeholder="Value">
+            <select id="unitI">
+              <option value="1">A</option>
+              <option value="0.001">mA</option>
+              <option value="1000">kA</option>
+            </select>
+          </div>
+        </div>
+        <!-- Resistance -->
+        <div class="field">
+          <label for="resistance">Resistance</label>
+          <div class="input-group">
+            <input type="number" step="any" id="resistance" placeholder="Value">
+            <select id="unitR">
+              <option value="1">Ω</option>
+              <option value="0.001">mΩ</option>
+              <option value="1000">kΩ</option>
+            </select>
+          </div>
+        </div>
+        <!-- Power -->
+        <div class="field">
+          <label for="power">Power</label>
+          <div class="input-group">
+            <input type="number" step="any" id="power" placeholder="Value">
+            <select id="unitP">
+              <option value="1">W</option>
+              <option value="0.001">mW</option>
+              <option value="1000">kW</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button onclick="calculate()" class="btn neon-btn">Calculate</button>
+        <button onclick="clearFields()" class="btn neon-btn">Clear</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
